@@ -1,0 +1,8 @@
+com\liker\controller\WeiXinController.class
+com\liker\domain\Message.class
+com\liker\service\CharacterEncodingRequest.class
+com\liker\service\MsgService.class
+com\liker\service\CharacterEncodingFilter.class
+com\liker\utils\HttpUtils.class
+com\liker\service\WeiXinService.class
+com\liker\utils\HttpRequest.class
