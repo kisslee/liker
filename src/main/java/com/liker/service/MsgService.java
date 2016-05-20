@@ -8,7 +8,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.liker.domain.Message;
-import com.liker.utils.HttpRequest;
+import com.liker.utils.HttpClientUtil;
 
 public class MsgService {
 
@@ -93,7 +93,8 @@ public class MsgService {
 				String url = "http://wap.kuaidi100.com/wap_result.jsp";
 		    	String param = "rand=20131109&id=" + kuaidi + "&fromWeb=null&&postid=" + getMsg.substring(2);
 		    	
-				String result = HttpRequest.sendGet(url, param);
+//				String result = HttpRequest.sendGet(url, param);
+				String result = HttpClientUtil.sendHttpGet(url, param);
 				
 //				logger.log(Level.INFO, "result=" + result);
 //				System.out.println("---result----->"+result);
@@ -111,8 +112,11 @@ public class MsgService {
 					StringBuffer sb = new StringBuffer();
 					
 					for (Element p : ps) { 
-						sb.append(p.ownText().substring(0,20) + "\n ");
-						sb.append(p.ownText().substring(21) + "\n");
+						String text = p.ownText();
+						if(!"".equals(text) && text.length() > 20){
+							sb.append(text.substring(0,20) + "\n ");
+							sb.append(text.substring(21) + "\n");
+						}
 					}
 					
 					msg = head + sb.toString() + 

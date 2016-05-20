@@ -129,9 +129,11 @@ public class HttpRequest {
         return result;
     }    
     
+    
     public static void main(String[] args) {
     	String url = "http://wap.kuaidi100.com/wap_result.jsp";
-    	String param = "rand=20131109&id=shunfeng&fromWeb=null&&postid=770131978305";
+//    	String param = "rand=20131109&id=shunfeng&fromWeb=null&&postid=770131978305";
+    	String param = "rand=20131109&id=yuantong&fromWeb=null&&postid=100591048341";
     	
 		String result = sendGet(url, param);
 		System.out.println(result);
