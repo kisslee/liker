@@ -4,5 +4,7 @@ com\liker\service\CharacterEncodingRequest.class
 com\liker\service\MsgService.class
 com\liker\service\CharacterEncodingFilter.class
 com\liker\utils\HttpUtils.class
+com\liker\utils\HttpClientUtil.class
+com\liker\utils\StringUtils.class
 com\liker\service\WeiXinService.class
 com\liker\utils\HttpRequest.class
