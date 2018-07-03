@@ -17,7 +17,7 @@ import com.liker.service.WeiXinService;
 public class WeiXinController extends HttpServlet{
 
 	/**
-	 * 
+	 * wx
 	 */
 	private static final long serialVersionUID = 1L;
 	
